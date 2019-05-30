@@ -30,9 +30,6 @@ public class Controller_Main {
     private void setImage(){
         Uri SelectedImage = data.getData();
         if(SelectedImage!=null){
-            String Alamat = SelectedImage.getPath();
-            Toast.makeText(context, "Alamat Gambar : " +
-                    ""+Alamat, Toast.LENGTH_LONG).show();
             try{
                 InputStream ImageStream = context.getContentResolver().openInputStream(SelectedImage);
                 Bitmap ImageBitmap = BitmapFactory.decodeStream(ImageStream);
